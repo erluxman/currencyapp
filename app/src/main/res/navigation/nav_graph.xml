@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/profileScreen">
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="com.erluxman.exchangerate.ui.profile.ProfileFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_exchangeRate"
+            app:destination="@id/exchangeRates" />
+    </fragment>
+    <fragment
+        android:id="@+id/exchangeRates"
+        android:name="com.erluxman.exchangerate.ui.exchangelist.ExchangeRateFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_exchange_rate">
+        <action
+            android:id="@+id/action_exchange_to_profile"
+            app:destination="@id/profileScreen" />
+    </fragment>
+
+</navigation>
