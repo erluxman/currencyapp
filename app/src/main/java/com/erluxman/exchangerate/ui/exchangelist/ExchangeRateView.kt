@@ -1,5 +1,6 @@
 package com.erluxman.exchangerate.ui.exchangelist
 
+import android.util.Log
 import android.view.ViewGroup
 import com.erluxman.exchangerate.R
 import com.erluxman.exchangerate.model.rate.ExchangeRateEvent
@@ -16,8 +17,9 @@ class ExchangeRateView(parent: ViewGroup) : BaseView<ExchangeRateModel, Exchange
     override val layout: Int = R.layout.fragment_exchange_rate
 
     override fun bindView(model: Observable<ExchangeRateModel>): Observable<ExchangeRateEvent> {
-        disposable += model.subscribe {
-
+        disposable += model.subscribe {model->
+            Log.d("datatest","baseCurrency ${model.baseCurrency}")
+            Log.d("datatest","exchange Rates ${model.exChangeRates}")
         }
         return Observable.mergeArray(
             containerView.goToProfile.clicks().map { OpenProfileEvent }

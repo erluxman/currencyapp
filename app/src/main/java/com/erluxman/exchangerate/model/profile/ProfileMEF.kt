@@ -1,5 +1,6 @@
 package com.erluxman.exchangerate.model.profile
 
+import com.erluxman.exchangerate.model.rate.ExchangeRateEvent
 import com.erluxman.exchangerate.model.rate.ExchangeRateModel
 
 data class ProfileModel(
@@ -26,9 +27,11 @@ data class UserProfile(
 
 sealed class ProfileEvent
 object OpenExchangePageEvent : ProfileEvent()
-object HandShakeEvent :ProfileEvent()
+object HandShakeEvent : ProfileEvent()
+data class ProfileFetchSuccessEvent(val exchangeRates: ExchangeRateModel) : ProfileEvent()
 sealed class ProfileEffect
 object OpenExchangePageEffect : ProfileEffect()
+object FetchProfileEffect : ProfileEffect()
 
 
 

@@ -5,6 +5,7 @@ import com.erluxman.exchangerate.model.profile.ProfileEffect
 import com.erluxman.exchangerate.model.profile.ProfileEvent
 import com.erluxman.exchangerate.model.profile.ProfileModel
 import com.erluxman.exchangerate.presentation.common.Component
+import com.erluxman.exchangerate.presentation.exchangerate.ExchangeRateUseCases
 import com.erluxman.exchangerate.presentation.profile.ProfileFragmentCommands
 import com.erluxman.exchangerate.presentation.profile.createProfileEffectHandler
 import com.erluxman.exchangerate.presentation.profile.initProfile
@@ -22,7 +23,7 @@ class ProfileComponentBuilder {
             updateFun = ::updateProfile,
             connectToViewFun = view::bindView,
             view = view,
-            effectFun = createProfileEffectHandler(commands),
+            effectFun = createProfileEffectHandler(commands, ExchangeRateUseCases()),
             defaultScreenModel = ProfileModel()
         )
     }

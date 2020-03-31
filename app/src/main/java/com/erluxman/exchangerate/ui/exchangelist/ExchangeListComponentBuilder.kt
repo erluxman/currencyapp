@@ -5,10 +5,7 @@ import com.erluxman.exchangerate.model.rate.ExchangeRateEffect
 import com.erluxman.exchangerate.model.rate.ExchangeRateEvent
 import com.erluxman.exchangerate.model.rate.ExchangeRateModel
 import com.erluxman.exchangerate.presentation.common.Component
-import com.erluxman.exchangerate.presentation.exchangerate.ExchangeRateFragmentCommands
-import com.erluxman.exchangerate.presentation.exchangerate.createExchangeRateEffectHandler
-import com.erluxman.exchangerate.presentation.exchangerate.initExchangeRate
-import com.erluxman.exchangerate.presentation.exchangerate.updateExchangeRate
+import com.erluxman.exchangerate.presentation.exchangerate.*
 
 class ExchangeRateComponentBuilder {
 
@@ -23,7 +20,7 @@ class ExchangeRateComponentBuilder {
             updateFun = ::updateExchangeRate,
             connectToViewFun = view::bindView,
             view = view,
-            effectFun = createExchangeRateEffectHandler(commands),
+            effectFun = createExchangeRateEffectHandler(commands, ExchangeRateUseCases()),
             defaultScreenModel = ExchangeRateModel()
         )
     }

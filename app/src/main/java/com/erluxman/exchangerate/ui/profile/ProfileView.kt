@@ -14,8 +14,8 @@ class ProfileView(parent: ViewGroup) : BaseView<ProfileModel, ProfileEvent>(pare
     override val layout: Int = R.layout.fragment_profile
 
     override fun bindView(model: Observable<ProfileModel>): Observable<ProfileEvent> {
-        disposable += model.subscribe {
-
+        disposable += model.subscribe {profile->
+            containerView.name.text = profile.userProfile.name
         }
         return Observable.mergeArray(
             containerView.goToExchangeRates.clicks().map { OpenExchangePageEvent }
