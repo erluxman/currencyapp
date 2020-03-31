@@ -21,30 +21,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Profile"
-                android:textColor="#333333"
+                android:textColor="#ffffff"
                 android:textSize="20sp" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_behavior="com.google.android.material.transformation.ExpandableBehavior">
-
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="40sp"
-            tools:text="Laxman" />
-
-        <Button
-            android:id="@+id/goToExchangeRates"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Choose Favourite Currencies"
-            app:layout_constraintTop_toBottomOf="@id/name"
-            android:textSize="20sp"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>
+<include layout="@layout/profile_card"/>
+   </LinearLayout>

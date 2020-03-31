@@ -19,7 +19,7 @@ data class UserProfile(
             "John Doe",
             29,
             "https://pbs.twimg.com/profile_images/1057989852942270464/bt45DHmR.jpg",
-            listOf("Hiking", "Dog owner", "Candle light dinner")
+            listOf("🏔 Hiking", "🐶 Dog owner", "🏔 Hiking", "🐶 Dog owner", "🕯 Candle light dinner")
         )
     }
 }

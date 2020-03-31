@@ -9,7 +9,7 @@ data class ExchangeRateModel(
     @SerializedName("base")
     val baseCurrency: String = "",
     @SerializedName("rates")
-    val exChangeRates: Map<String, String> = mapOf()
+    val exChangeRates: Map<String, Float> = mapOf()
 )
 
 sealed class ExchangeRateEvent
