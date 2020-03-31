@@ -13,6 +13,7 @@ import com.google.android.material.chip.Chip
 import com.jakewharton.rxbinding3.view.clicks
 import io.reactivex.Observable
 import io.reactivex.rxkotlin.plusAssign
+import kotlinx.android.synthetic.main.exchange_rates.view.*
 import kotlinx.android.synthetic.main.item_currency_row.view.*
 import kotlinx.android.synthetic.main.profile_card.view.*
 
