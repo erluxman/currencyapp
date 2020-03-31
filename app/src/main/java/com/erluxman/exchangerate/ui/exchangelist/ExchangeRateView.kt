@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.fragment_exchange_rate.view.*
 
 
 class ExchangeRateView(parent: ViewGroup) : BaseView<ExchangeRateModel, ExchangeRateEvent>(parent) {
-    override val layout: Int = R.layout.fragment_profile
+    override val layout: Int = R.layout.fragment_exchange_rate
 
     override fun bindView(model: Observable<ExchangeRateModel>): Observable<ExchangeRateEvent> {
         disposable += model.subscribe {

@@ -26,6 +26,7 @@ data class UserProfile(
 
 sealed class ProfileEvent
 object OpenExchangePageEvent : ProfileEvent()
+object HandShakeEvent :ProfileEvent()
 sealed class ProfileEffect
 object OpenExchangePageEffect : ProfileEffect()
 

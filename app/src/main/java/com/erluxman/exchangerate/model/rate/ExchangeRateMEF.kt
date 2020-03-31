@@ -14,4 +14,6 @@ sealed class ExchangeRateEvent
 sealed class ExchangeRateEffect
 
 object OpenProfileEvent:ExchangeRateEvent()
+object HandShakeEvent:ExchangeRateEvent()
+
 object OpenProfileEffect:ExchangeRateEffect()
